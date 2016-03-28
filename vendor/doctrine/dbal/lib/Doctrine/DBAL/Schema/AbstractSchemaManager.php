@@ -202,7 +202,7 @@ abstract class AbstractSchemaManager
      */
     public function tablesExist($tableNames)
     {
-        $tableNames = array_map('strtolower', (array) $tableNames);
+        $tableNames = array_map('strtolower', (array)$tableNames);
 
         return count($tableNames) == count(\array_intersect($tableNames, array_map('strtolower', $this->listTableNames())));
     }
@@ -237,10 +237,9 @@ abstract class AbstractSchemaManager
             return $assetNames;
         }
 
-        return array_values(
+        return array_values (
             array_filter($assetNames, function ($assetName) use ($filterExpr) {
                 $assetName = ($assetName instanceof AbstractAsset) ? $assetName->getName() : $assetName;
-
                 return preg_match($filterExpr, $assetName);
             })
         );
@@ -953,7 +952,6 @@ abstract class AbstractSchemaManager
 
     /**
      * @param array $views
-     *
      * @return array
      */
     protected function _getPortableViewsList($views)

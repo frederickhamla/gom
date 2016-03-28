@@ -339,7 +339,6 @@ class Index extends AbstractAsset implements Constraint
     /**
      * Return whether the two indexes have the same partial index
      * @param \Doctrine\DBAL\Schema\Index $other
-     *
      * @return boolean
      */
     private function samePartialIndex(Index $other)

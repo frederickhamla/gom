@@ -19,7 +19,6 @@
 
 namespace Doctrine\DBAL\Platforms;
 
-use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\ColumnDiff;
 use Doctrine\DBAL\Schema\Identifier;
@@ -439,8 +438,7 @@ class DB2Platform extends AbstractPlatform
      */
     public function getIndexDeclarationSQL($name, Index $index)
     {
-        // Index declaration in statements like CREATE TABLE is not supported.
-        throw DBALException::notSupported(__METHOD__);
+        return $this->getUniqueConstraintDeclarationSQL($name, $index);
     }
 
     /**
@@ -703,7 +701,7 @@ class DB2Platform extends AbstractPlatform
         }
 
         if (isset($field['version']) && $field['version']) {
-            if ((string) $field['type'] != "DateTime") {
+            if ((string)$field['type'] != "DateTime") {
                 $field['default'] = "1";
             }
         }
@@ -744,8 +742,8 @@ class DB2Platform extends AbstractPlatform
             return $query;
         }
 
-        $limit = (int) $limit;
-        $offset = (int) (($offset)?:0);
+        $limit = (int)$limit;
+        $offset = (int)(($offset)?:0);
 
         // Todo OVER() needs ORDER BY data!
         $sql = 'SELECT db22.* FROM (SELECT ROW_NUMBER() OVER() AS DC_ROWNUM, db21.* '.

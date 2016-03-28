@@ -280,7 +280,6 @@ class SQLAzureFederationsSynchronizer extends AbstractSchemaSynchronizer
                 $defaultValue = '';
                 break;
         }
-
         return $defaultValue;
     }
 
