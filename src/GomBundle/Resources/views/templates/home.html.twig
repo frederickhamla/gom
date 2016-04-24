@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% stylesheets '@bootstrap_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+</head>
+<body>
+<div class="container">
+    <h1>Home</h1>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-6">TEST COL XS 6</div>
+            <div class="col-xs-6">2 COL XS 6</div>
+        </div>
+    </div>
+</div>
+{% javascripts '@jquery' '@bootstrap_js' %}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+</body>
+</html>
