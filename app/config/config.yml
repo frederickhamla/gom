@@ -72,7 +72,7 @@ swiftmailer:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ 'AsseticBundle' ]
+    bundles:        [ 'AsseticBundle', 'GomBundle' ]
 
     filters:
         cssrewrite: ~
