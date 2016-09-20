@@ -12,7 +12,7 @@
         </pre>
     </div>
 
-    {#Last news#}
+    Last news
     <div class="col-xs-9">
         <h1>Dernières actualités</h1>
         <div class="row">
@@ -35,18 +35,18 @@
                     <div>
                         <img src="" alt="">%%LES PROMOS DU MOIS
                     </div>
+                    <div class="products">
+                        {#{% include 'GomBundle:templates:products.html.twig' %}#}
+                    </div>
                 </section>
             </div>
         </div>
     </div>
 
-    {#SIDEBAR#}
-    <div class="col-xs-3 pull-right" style="background-color: #9d9d9d; height: 100%">
+    SIDEBAR
+    <div class="col-xs-3 pull-right" style="background-color: #9d9d9d; height: 150px">
         <h3>%%SIDEBAR%%</h3>
     </div>
 
-
-
-    {% include 'GomBundle:layouts:include/footer.html.twig' %}
+        {%  include 'GomBundle:layouts:include/footer.html.twig' %}
 {% endblock %}
-

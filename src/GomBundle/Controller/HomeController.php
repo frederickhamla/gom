@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function indexAction()
         {
-            return $this->render('GomBundle:Templates:home.html.twig');
+            return $this->render('GomBundle:templates:home.html.twig');
         }
 }
