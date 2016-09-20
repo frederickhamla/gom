@@ -1,0 +1,52 @@
+{% extends 'GomBundle:layouts:layout.html.twig' %}
+
+
+{% block content %}
+    {% include 'GomBundle:layouts:include/header.html.twig' %}
+    {% include 'GomBundle:layouts:include/menu.html.twig' %}
+
+    <div class="carousel" style="width: 100%; height: 450px; background-color: #00AA88">
+        <img src="" alt="">%%CAROUSSEL%%
+        <pre style="background-color: #00AA88">
+            <h2>%%TXT PROMO + METTRE EN PLACE LE CAROUSEL</h2>
+        </pre>
+    </div>
+
+    Last news
+    <div class="col-xs-9">
+        <h1>Dernières actualités</h1>
+        <div class="row">
+            <div class="col-xs-12" style="height: 450px; background-color: #c4c4c4">
+                <section>
+                    <div class="col-xs-5" style="background-color: #7a43b6; height: 100%;">%%ACTUALITES%%</div>
+                    <div class="col-xs-5 col-xs-offset-1" style="background-color: #31708f; height: 100%;">%%VIDEOS%%</div>
+                </section>
+            </div>
+            <div class="col-xs-12" style="height: 300px; background-color: #c4e3f3">
+                <section>
+                    <div>
+                        <h1>%%RESUME ARTICLE%%</h1>
+                        <p>Lorem ipsum</p>
+                    </div>
+                </section>
+            </div>
+            <div class="col-xs-12" style="background-color: #973634; height: 300px;">
+                <section>
+                    <div>
+                        <img src="" alt="">%%LES PROMOS DU MOIS
+                    </div>
+                    <div class="products">
+                        {#{% include 'GomBundle:templates:products.html.twig' %}#}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    SIDEBAR
+    <div class="col-xs-3 pull-right" style="background-color: #9d9d9d; height: 150px">
+        <h3>%%SIDEBAR%%</h3>
+    </div>
+
+        {%  include 'GomBundle:layouts:include/footer.html.twig' %}
+{% endblock %}
